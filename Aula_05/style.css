@@ -1,5 +1,7 @@
 .div_princ{
-    flex-direction: ;
+   display: flex;
+align-items: center;
+
 .lado-esquerdo {
 
     width: 48%;

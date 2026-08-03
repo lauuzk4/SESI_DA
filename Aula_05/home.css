@@ -110,6 +110,8 @@ header p {
     color: white;
     height: 60px;
     width: 50%;
+    border-radius: 50px;
+    cursor: pointer;
 }
 
 .anuncio-ld{

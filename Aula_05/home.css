@@ -157,4 +157,61 @@ header p {
 
 .dicas-le span{
     font-width: bold;
+    
+}
+ 
+footer{
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+
+footer h1{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.grupo-assinar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grupo-assinar input{
+    height: 50px;
+    width: 500px;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 10px;
+    font-size: 24px;
+    padding-left: 10px;
+    color: white;
+}
+
+.grupo-assinar button{
+    height: 51px;
+    width: 200px;
+    background-color: #EBC154;
+    font-size: 24px;
+    color: white;
+    text-transform: uppercase;
+    margin-left: 10px;
+    border-radius: 10px;
+    border: 0px;
+    cursor: pointer;
+}
+
+.menu-rodape{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-itens ul{
+    display: flex;
+}
+
+.menu-itens li{
+    margin-left: 20px;
+    list-style-type: none;
 }

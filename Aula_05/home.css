@@ -123,3 +123,38 @@ header p {
     border-radius: 70px;
     margin: 20px;
 }
+
+.grupo-dicas{
+    display: flex;
+    margin-top: 70px;
+    justify-content: center;
+}
+
+.dicas-ld{
+    width: 50%;
+}
+
+.dicas-le{
+    width: 50%;
+}
+
+.dicas-ld img{
+    width: 684px;
+    height: 800px;
+    border-radius: 20px;
+    
+}
+
+.dicas-le h1{
+    font-size: 41px;
+    font-weight: bold;
+}
+
+.dicas-le p{
+    font-size: 28px;
+    color: #5C5C5C;
+}
+
+.dicas-le span{
+    font-width: bold;
+}

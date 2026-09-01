@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 32px 16px;
+    background: linear-gradient(135deg, #d4cf82 0%, #91b2eb 100%);
+    color: #fff;
+}
+
+/* ===== Área de nomes ===== */
+#nomes {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+    padding: 20px 28px;
+    width: 100%;
+    max-width: 360px;
+    text-align: center;
+    backdrop-filter: blur(4px);
+}
+
+#nomes h1 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 14px;
+}
+
+#nomes h1:first-child {
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#nomes input {
+    width: 100%;
+    margin-top: 6px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+/* ===== Tabuleiro ===== */
+#Jogo {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 8px;
+    border-radius: 12px;
+}
+
+#Jogo > div {
+    display: flex;
+}
+
+#Jogo button {
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    font-weight: bold;
+    background: #ffffff;
+    color: bisque;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.1s ease;
+}
+
+#Jogo button:hover:not(:disabled) {
+    background: #e6ecff;
+    transform: scale(1.03);
+}
+
+#Jogo button:disabled {
+    cursor: not-allowed;
+    color: #242b50;
+}
+
+/* ===== Botão de reiniciar (opcional, caso adicione no HTML) ===== */
+button#reiniciar,
+button[onclick="reiniciarJogo()"] {
+    margin-top: 4px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #6a11cb;
+    background: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button#reiniciar:hover,
+button[onclick="reiniciarJogo()"]:hover {
+    background: #e6ecff;
+}

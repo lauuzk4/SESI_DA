@@ -1,11 +1,16 @@
 input{
+    margin: 1px;
+    padding: 1px;
+    border-color: rgb(194, 174, 136) ;
     background-color: bisque;
     border-radius: 50px;
-    width: 180px;
-    height: 60px;
+    width: 187px;
+    height: 55px;
 }
 
 button{
+    margin: 1px;
+    padding: 1px;
     background-color: bisque;
     border-radius: 50px;
     width: 60px;

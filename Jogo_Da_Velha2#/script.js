@@ -4,7 +4,9 @@
 //true == X
 //false == O
 var ordem_jogada = true;
-var total_partidas = 0;
+var total_jogadas = 0;
+var total_de_vitorias_O;
+var total_de_vitorias_X;
   
 function jogar(num_btn){
     //busque o botao que esta sendo clicado
@@ -44,7 +46,8 @@ function validarGanhador(){
         && (btn3_vlr !== "")) {
         alert("O ganhador foi " + (ordem_jogada ? "O" : "X"));
         LimparJogo();
-        total_partidas ++;
+        contabilizarganhadores();
+       
     } else if ((btn4_vlr == btn5_vlr)
         && (btn4_vlr == btn6_vlr)
         && (btn4_vlr !== "")
@@ -52,7 +55,8 @@ function validarGanhador(){
         && (btn6_vlr !== "")) {
         alert("O ganhador foi " + (ordem_jogada ? "O" : "X"));
         LimparJogo();
-        total_partidas ++;
+        contabilizarganhadores();
+    
     } else if ((btn7_vlr == btn8_vlr)
         && (btn7_vlr == btn9_vlr)
         && (btn7_vlr !== "")
@@ -60,7 +64,8 @@ function validarGanhador(){
         && (btn9_vlr !== "")) {
         alert("O ganhador foi " + (ordem_jogada ? "O" : "X"));
         LimparJogo();
-        total_partidas ++;
+        contabilizarganhadores();
+       
     } else if ((btn1_vlr == btn4_vlr)
         && (btn4_vlr == btn7_vlr)
         && (btn1_vlr !== "")
@@ -68,7 +73,8 @@ function validarGanhador(){
         && (btn7_vlr !== "")) {
         alert("O ganhador foi " + (ordem_jogada ? "O" : "X"));
         LimparJogo();
-        total_partidas ++;
+        contabilizarganhadores();
+    
     } else if ((btn2_vlr == btn5_vlr)
         && (btn2_vlr == btn8_vlr)
         && (btn2_vlr !== "")
@@ -76,7 +82,8 @@ function validarGanhador(){
         && (btn8_vlr !== "")) {
         alert("O ganhador foi " + (ordem_jogada ? "O" : "X"));
         LimparJogo();
-        total_partidas ++;
+        contabilizarganhadores();
+    
     } else if ((btn3_vlr == btn6_vlr)
         && (btn3_vlr == btn9_vlr)
         && (btn3_vlr !== "")
@@ -84,7 +91,8 @@ function validarGanhador(){
         && (btn9_vlr !== "")) {
         alert("O ganhador foi " + (ordem_jogada ? "O" : "X"));
         LimparJogo();
-        total_partidas ++;
+        contabilizarganhadores();
+    
     } else if ((btn1_vlr == btn5_vlr)
         && (btn1_vlr == btn9_vlr)
         && (btn1_vlr !== "")
@@ -92,7 +100,8 @@ function validarGanhador(){
         && (btn9_vlr !== "")) {
         alert("O ganhador foi " + (ordem_jogada ? "O" : "X"));
         LimparJogo();
-        total_partidas ++;
+        contabilizarganhadores();
+    
     } else if ((btn3_vlr == btn5_vlr)
         && (btn3_vlr == btn7_vlr)
         && (btn3_vlr !== "")
@@ -100,7 +109,8 @@ function validarGanhador(){
         && (btn7_vlr !== "")) {
         alert("O ganhador foi " + (ordem_jogada ? "O" : "X"));
         LimparJogo();
-        total_partidas ++;
+        contabilizarganhadores();
+    
     } else if(btn1_vlr !== ""
         && btn2_vlr !== ""
         && btn3_vlr !== ""
@@ -112,7 +122,8 @@ function validarGanhador(){
         && btn9_vlr !== ""
     ){alert("Empate!");
         LimparJogo();
-        total_partidas ++;
+        contabilizarganhadores();
+    
     }
 }
 
@@ -130,6 +141,18 @@ function LimparJogo(){
 
 
 
-function vitoria_O(){
+function contabilizarganhadores(){
+    total_jogadas++;
 
+    if(ordem_jogada == true){
+       total_de_vitorias_O++;
+    }else{
+        total_de_vitorias_X++;
+    }
+
+  
+
+    document.getElementById("total_jogadas").innerHTML = "Total de jogadas: " + total_jogadas;
+    document.getElementById(total_O).innerHTML = "total de vitorias O: " + total_de_vitorias_O;
+    document.getElementById(total_X).innerHTML = "total de vitorias O: " + total_de_vitorias_X;
 }

@@ -29,3 +29,30 @@ function login() {
 
     //validar se os valores sao iguais aos valores armazenados no localStorage    
 }
+
+function cadastro(){
+    //carregar os campos de cadastro
+    //nome, usuario, senha, palavra passe
+
+    //cadastrar os dados dentro do localStorage
+    // localStorage.setItem(nomedocampo, valor(valor que vc carregou do campo que o usuario digitou))
+
+    //redirecionar para tela de login
+
+}
+
+function recuperar_senha(){
+    //carregar valores dos campos nome, palavra-passe
+
+    //buscar no localstorage os valores de nome, palavra passe
+
+    //comparar se os campos carrgados em tela sao compativeis com os valores armazenados em localstorage
+    //se for igual, exibir a senha em um alert
+    //se nao, notificar o usuario em um alert que os dados nao sao compativeis, alem disso, limpar os inputs
+
+    //desafio: voces devem implementar um controle de tentativas de recuperar a senha
+    //regras: voces devem validar a quantidade de erros de nome, senha.
+    //quando o usuario errar 3 vezes, voces devem bloquear os campos(inputs), e nao deixar o usuario tetar uma nova tentativa de solicitação de recuperação  de senha
+    //lembrando que voce deve salvar a quantidadde de erros em localstorage
+}
+

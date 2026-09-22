@@ -10,8 +10,8 @@
 
 function login() {
     //acessar o valor digitado nos campos usuario e senha
-    const local_usuario = localStorage.getItem("usuario");
-    const local_senha = localStorage.getItem("senha");
+    const local_usuario = localStorage.getItem("Usuario");
+    const local_senha = localStorage.getItem("Senha");
 
 
     const campo_usuario = document.getElementById("usuario").value;
@@ -22,6 +22,7 @@ function login() {
 
     if (campo_usuario == local_usuario && campo_senha == local_senha){
         alert("Usuario e senha corretos");
+        window.location.href = "home.html";
     }else{
         alert("usuario e senha incorretos");
     }
@@ -31,6 +32,17 @@ function login() {
 }
 
 function cadastro(){
+    let nome = document.getElementById("nome").value;
+    let usuario = document.getElementById("usuario").value;
+    let senha = document.getElementById("senha").value;
+
+    localStorage.setItem("Nome", nome);
+    localStorage.setItem("Usuario", usuario);
+    localStorage.setItem("Senha", senha);
+    
+    alert("usuario cadastrado, volte para a tela de login")
+
+    window.location.href = "login.html";
     //carregar os campos de cadastro
     //nome, usuario, senha, palavra passe
 
@@ -42,6 +54,17 @@ function cadastro(){
 }
 
 function recuperar_senha(){
+    const senha = localStorage.getItem('Senha');
+
+    localStorage.setItem("Nome", nome);
+    localStorage.setItem("Usuario", usuario);
+    localStorage.setItem("Senha", senha);
+
+    if(rec_senha_nome == Nome && rec_senha_usuario == Usuario){
+        alert( "a senha antiga é" Senha);
+    }else{
+        alert("Usuario e nome incorretos");
+    }
     //carregar valores dos campos nome, palavra-passe
 
     //buscar no localstorage os valores de nome, palavra passe

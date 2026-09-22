@@ -54,17 +54,66 @@ function cadastro(){
 }
 
 function recuperar_senha(){
-    const senha = localStorage.getItem('Senha');
 
-    localStorage.setItem("Nome", nome);
-    localStorage.setItem("Usuario", usuario);
-    localStorage.setItem("Senha", senha);
+     // 1º Carregar os valores dos campos NOME, PALAVRA-PASSE e a NOVA_SENHA
+    const nome = document.getElementById("nome");
+    const palavra_passe = document.getElementById("palavra_passe");
+    const nova_senha = document.getElementById("nova_senha");
 
-    if(rec_senha_nome == Nome && rec_senha_usuario == Usuario){
-        alert( "a senha antiga é" Senha);
-    }else{
-        alert("Usuario e nome incorretos");
+    // 2º Buscar no localStorage os valores de NOME e PALAVRA-PASSE
+    const ls_nome = localStorage.getItem("nome");
+    const ls_palavra_passe = localStorage.getItem("palavra_passe");
+    // const ls_senha = localStorage.getItem("senha");
+
+
+    // 3º Comparar se os valores carregados nos campos da tela
+    // são compatíveis com os valores armazenados no localStorage.
+    if (nome.value == ls_nome && palavra_passe.value == ls_palavra_passe) {
+        // Se forem iguais, exibir a senha na tela ou em um alert.
+        // alert("SENHA: " + ls_senha);
+        localStorage.setItem("senha", nova_senha.value);
+        window.location.href = "login.html";
+    } else {
+
+        // DESAFIO SEM I.AAAAA:
+        //
+        // Vocês devem implementar um controle de tentativas para a recuperação de senha.
+        //
+        // REGRAS:
+        // Vocês devem validar a quantidade de tentativas incorretas
+        // de NOME e PALAVRA-PASSE.
+        //
+        // Quando o usuário errar 3 vezes, vocês devem bloquear os campos (inputs)
+        // e impedir que o usuário realize uma nova tentativa de recuperação de senha.
+        //
+        // Lembrem-se de salvar a quantidade de erros no localStorage.
+
+
+        var quantidade_erros = Number(localStorage.getItem("quantidade_erros")) || 1;
+        // Se forem diferentes, notificar o usuário na tela ou em um alert
+        // informando que os dados não são compatíveis.
+        // Além disso, limpar os campos de entrada (inputs).
+        alert("Nome ou palavra passe inválida!");
+
+        nome.value = "";
+        palavra_passe.value = "";
+        nova_senha.value = "";
+
+        quantidade_erros++;
+
+        localStorage.setItem("quantidade_erros", quantidade_erros);
+
+        if (quantidade_erros >= 3) {
+            nome.disabled = true;
+            palavra_passe.disabled = true;
+            nova_senha.disabled = true;
+        }
+
+
     }
+
+}
+   
     //carregar valores dos campos nome, palavra-passe
 
     //buscar no localstorage os valores de nome, palavra passe

@@ -1,21 +1,26 @@
 <!DOCTYPE html>
-<html lang="PT-br">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recuperar Senha</title>
 </head>
+
 <body>
-    <h1>Recuperar Senha</h1>
+    <label for="nome">Nome</label>
+    <input id="nome" type="text">
 
-    <label for="rec_senha_nome">Nome</label>
-    <input id="rec_senha_nome" type="text">
+    <label for="palavra_passe">Palavra passe</label>
+    <input id="palavra_passe" type="text">
 
-    <label for="rec_senha_usuario">Usuário</label>
-    <input id="rec_senha_usuario" type="text">
+    <label for="nova_senha">Nova senha</label>
+    <input id="nova_senha" type="password">
 
+    <button onclick="recuperar_senha()">Solicitar</button>
 
-    <button onclick="recuperar_senha()">Mostrar senha antiga</button>
     <script src="./script.js"></script>
+
 </body>
+
 </html>

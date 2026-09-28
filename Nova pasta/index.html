@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Controle de Hábitos Diários</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="caixaPrincipal">
+    <header>
+      <h1>Controle de Hábitos</h1>
+    </header>
+
+    <section class="areaResumo">
+      <div class="caixaTotal">
+        <span class="quantidadeTotal">0</span>
+        <small>Total</small>
+      </div>
+      <div class="caixaConcluidos">
+        <span class="quantidadeConcluidos">0</span>
+        <small>Concluídos</small>
+      </div>
+    </section>
+
+    <div class="formularioHabito">
+      <input type="text" class="campoNomeHabito" placeholder="Digite um novo hábito (ex: Beber água)" autocomplete="off">
+
+      <div class="areaCamposData">
+        <input type="number" class="campoDia" placeholder="Dia" min="1" max="31">
+        <input type="text" class="campoMes" placeholder="Mês (ex: Janeiro)">
+        <input type="number" class="campoAno" placeholder="Ano" min="1900" max="2100">
+      </div>
+
+      <button class="botaoAdicionar" onclick="adicionar()">Adicionar</button>
+    </div>
+
+    <p class="mensagem"></p>
+
+    <ul class="listaHabitos"></ul>
+
+    <p class="avisoListaVazia">Nenhum hábito cadastrado ainda. Adicione o primeiro! 🚀</p>
+
+    <button class="botaoLimparConcluidos" onclick="limparConcluidos()">Limpar concluídos</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
